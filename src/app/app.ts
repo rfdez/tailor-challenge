@@ -3,6 +3,8 @@ import { logger } from "hono/logger";
 import { requestId } from "hono/request-id";
 import { secureHeaders } from "hono/secure-headers";
 
+import restaurants from "./api/restaurants.js";
+
 const app = new Hono();
 
 app.use(logger());
@@ -16,5 +18,7 @@ app.get("/", (c) => {
 app.get("/ping", (c) => {
   return c.text("pong");
 });
+
+app.route("/restaurants", restaurants);
 
 export default app;
