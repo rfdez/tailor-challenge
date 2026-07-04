@@ -1,0 +1,57 @@
+{
+  "name": "tailor-challenge",
+  "version": "1.0.0",
+  "description": "Tailor challenge for the position of Backend Developer at Tailor",
+  "keywords": [],
+  "homepage": "https://github.com/rfdez/tailor-challenge#readme",
+  "bugs": {
+    "url": "https://github.com/rfdez/tailor-challenge/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rfdez/tailor-challenge.git"
+  },
+  "license": "ISC",
+  "author": "Raúl Fernández <49290264+rfdez@users.noreply.github.com>",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rimraf dist coverage",
+    "dev": "tsx watch src/index.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prep": "npm run format:check && npm run lint && npm run build && npm run test -- run",
+    "start": "node dist/index.js",
+    "test": "vitest",
+    "test:ci": "vitest --tags-filter=ci",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@hono/node-server": "2.0.8",
+    "@hono/standard-validator": "0.2.3",
+    "hono": "4.12.27",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@faker-js/faker": "10.5.0",
+    "@types/node": "24.13.2",
+    "@vitest/coverage-v8": "4.1.9",
+    "eslint": "10.6.0",
+    "eslint-config-prettier": "10.1.8",
+    "prettier": "3.9.4",
+    "prettier-plugin-packagejson": "3.0.2",
+    "rimraf": "6.1.3",
+    "tsx": "4.22.5",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.62.1",
+    "vitest": "4.1.9"
+  },
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.3.0"
+  }
+}
