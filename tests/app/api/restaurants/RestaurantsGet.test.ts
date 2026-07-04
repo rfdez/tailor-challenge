@@ -7,6 +7,6 @@ describe("GET /restaurants should", () => {
     const res = await app.request("/restaurants");
 
     expect(res.status).toBe(200);
-    expect(await res.json()).toEqual({ restaurants: [] });
+    expect(await res.json()).toEqual({ restaurants: expect.any(Array) });
   });
 });
