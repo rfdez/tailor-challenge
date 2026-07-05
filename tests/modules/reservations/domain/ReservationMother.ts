@@ -11,7 +11,16 @@ export class ReservationMother {
       id: faker.string.uuid(),
       restaurantId: faker.string.uuid(),
       userId: faker.string.uuid(),
-      date: faker.date.soon().toISOString().split("T")[0] ?? "",
+      date:
+        faker.date
+          .soon({
+            days: {
+              min: 1,
+              max: 30,
+            },
+          })
+          .toISOString()
+          .split("T")[0] ?? "",
       time:
         faker.date.soon().toISOString().split("T")[1]?.substring(0, 5) ?? "",
       partySize: faker.number.int({ min: 1, max: 10 }),
