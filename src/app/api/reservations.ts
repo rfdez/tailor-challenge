@@ -5,7 +5,8 @@ import * as z from "zod";
 import { ReservationCreator } from "../../modules/reservations/application/create/ReservationCreator.js";
 import { NegativeOrZeroReservationPartySizeError } from "../../modules/reservations/domain/NegativeOrZeroReservationPartySizeError.js";
 import { PastReservationDateError } from "../../modules/reservations/domain/PastReservationDateError.js";
-import { InMemoryReservationRepository } from "../../modules/reservations/infrastructure/InMemoryReservationRepository.js";
+import { PostgresReservationRepository } from "../../modules/reservations/infrastructure/PostgresReservationRepository.js";
+import { PostgresConnectionFactory } from "../../modules/shared/infrastructure/PostgresConnectionFactory.js";
 import { SystemClock } from "../../modules/shared/infrastructure/SystemClock.js";
 
 const app = new Hono();
@@ -22,7 +23,8 @@ const createReservationBodySchema = z.object({
 });
 
 const clock = new SystemClock();
-const repository = new InMemoryReservationRepository();
+const connection = PostgresConnectionFactory.create();
+const repository = new PostgresReservationRepository(connection);
 const creator = new ReservationCreator(repository, clock);
 
 app.put(

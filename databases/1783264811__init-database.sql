@@ -27,7 +27,7 @@ EXECUTE FUNCTION update_updated_at_column();
 
 CREATE TABLE reservations (
     id UUID PRIMARY KEY NOT NULL,
-    restaurant_id UUID NOT NULL REFERENCES restaurants(id) ON DELETE CASCADE,
+    restaurant_id UUID NOT NULL,
     user_id UUID NOT NULL,
     date DATE NOT NULL,
     time TIME NOT NULL,
