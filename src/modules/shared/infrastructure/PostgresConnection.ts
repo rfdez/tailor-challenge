@@ -17,6 +17,9 @@ export class PostgresConnection {
       user,
       password,
       database,
+      onnotice: () => {
+        // Ignore notice messages from PostgreSQL
+      },
     });
   }
 
