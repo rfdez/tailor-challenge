@@ -1,0 +1,24 @@
+name: tailor-challenge
+
+services:
+  postgres:
+    image: postgres:18-alpine
+    container_name: postgres
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "restaurants", "-d", "restaurants"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      POSTGRES_USER: restaurants
+      POSTGRES_PASSWORD: S3cureP@ssw0rd
+      POSTGRES_DB: restaurants
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./databases:/docker-entrypoint-initdb.d
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
