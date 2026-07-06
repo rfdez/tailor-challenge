@@ -34,4 +34,15 @@ export class ReservationMother {
   static confirmed(): Reservation {
     return this.create({ status: "confirmed" });
   }
+
+  static confirmedWithRestaurantAndDate(
+    restaurantId: string,
+    date: string,
+  ): Reservation {
+    return this.create({ status: "confirmed", restaurantId, date });
+  }
+
+  static multiple(count = 5): Reservation[] {
+    return Array.from({ length: count }, () => this.create());
+  }
 }

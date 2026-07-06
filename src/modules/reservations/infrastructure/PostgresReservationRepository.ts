@@ -2,17 +2,17 @@ import { PostgresConnection } from "../../shared/infrastructure/PostgresConnecti
 import { Reservation } from "../domain/Reservation.js";
 import { ReservationRepository } from "../domain/ReservationRepository.js";
 
-// interface DatabaseReservation {
-//   id: string;
-//   restaurant_id: string;
-//   user_id: string;
-//   date: string;
-//   time: string;
-//   party_size: number;
-//   status: "confirmed" | "cancelled";
-//   created_at: string;
-//   updated_at: string;
-// }
+interface DatabaseReservation {
+  id: string;
+  restaurant_id: string;
+  user_id: string;
+  date: Date;
+  time: string;
+  party_size: number;
+  status: "confirmed" | "cancelled";
+  created_at: string;
+  updated_at: string;
+}
 
 export class PostgresReservationRepository implements ReservationRepository {
   constructor(private readonly connection: PostgresConnection) {}
@@ -31,5 +31,28 @@ export class PostgresReservationRepository implements ReservationRepository {
         party_size = EXCLUDED.party_size,
         status = EXCLUDED.status;
     `;
+  }
+
+  async searchByRestaurantAndDate(
+    restaurantId: string,
+    date: string,
+  ): Promise<Reservation[]> {
+    const reservations = await this.connection.searchMany<DatabaseReservation>`
+        SELECT id, restaurant_id, user_id, date, time, party_size, status, created_at, updated_at
+        FROM reservations
+        WHERE restaurant_id = ${restaurantId} AND date = ${date} AND status = 'confirmed';
+      `;
+
+    return reservations.map((r) => {
+      return Reservation.fromPrimitives({
+        id: r.id,
+        restaurantId: r.restaurant_id,
+        userId: r.user_id,
+        date: r.date.toISOString().substring(0, 10),
+        time: r.time.substring(0, 5),
+        partySize: r.party_size,
+        status: r.status,
+      });
+    });
   }
 }
