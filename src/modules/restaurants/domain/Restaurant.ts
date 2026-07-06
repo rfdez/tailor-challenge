@@ -1,3 +1,8 @@
+import {
+  ReservationSettings,
+  type ReservationSettingsPrimitives,
+} from "./ReservationSettings.js";
+
 export interface RestaurantPrimitives {
   id: string;
   name: string;
@@ -7,6 +12,9 @@ export interface RestaurantPrimitives {
   coordinates: { lat: number; lng: number };
   rating: number;
   commentsCounter: number;
+  capacity: number;
+  cuisineType: string;
+  reservationSettings: ReservationSettingsPrimitives;
 }
 
 export class Restaurant {
@@ -19,6 +27,9 @@ export class Restaurant {
     private readonly coordinates: { lat: number; lng: number },
     private readonly rating: number,
     private readonly commentsCounter: number,
+    private readonly capacity: number,
+    private readonly cuisineType: string,
+    private readonly reservationSettings: ReservationSettings,
   ) {}
 
   static fromPrimitives(primitives: RestaurantPrimitives): Restaurant {
@@ -31,6 +42,9 @@ export class Restaurant {
       primitives.coordinates,
       primitives.rating,
       primitives.commentsCounter,
+      primitives.capacity,
+      primitives.cuisineType,
+      ReservationSettings.fromPrimitives(primitives.reservationSettings),
     );
   }
 
@@ -44,6 +58,9 @@ export class Restaurant {
       coordinates: this.coordinates,
       rating: this.rating,
       commentsCounter: this.commentsCounter,
+      capacity: this.capacity,
+      cuisineType: this.cuisineType,
+      reservationSettings: this.reservationSettings.toPrimitives(),
     };
   }
 }

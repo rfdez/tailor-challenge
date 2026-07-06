@@ -4,6 +4,7 @@ import {
   Restaurant,
   type RestaurantPrimitives,
 } from "../../../../src/modules/restaurants/domain/Restaurant.js";
+import { ReservationSettingsMother } from "./ReservationSettingsMother.js";
 
 export class RestaurantMother {
   static create(params?: Partial<RestaurantPrimitives>): Restaurant {
@@ -19,6 +20,9 @@ export class RestaurantMother {
       },
       rating: faker.number.int({ min: 0, max: 5 }),
       commentsCounter: faker.number.int({ min: 0, max: 100 }),
+      capacity: faker.number.int({ min: 20, max: 200 }),
+      cuisineType: faker.food.ethnicCategory(),
+      reservationSettings: ReservationSettingsMother.create().toPrimitives(),
       ...params,
     };
 
