@@ -42,6 +42,7 @@ npx eslint --fix src/modules/merchants/infrastructure/ElasticMerchantRepository.
 docs/
 ├── backend
 │   ├── api-response-envelope.md
+│   ├── client-generated-ids.md
 │   ├── cross-module-communication.md
 │   ├── hexagonal-architecture.md
 │   ├── search-vs-find-naming.md
