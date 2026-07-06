@@ -32,4 +32,14 @@ export class RestaurantMother {
   static multiple(count = 5): Restaurant[] {
     return Array.from({ length: count }, () => this.create());
   }
+
+  static withLunchWindow(): Restaurant {
+    return this.create({
+      reservationSettings: {
+        slotIntervalMinutes: 30,
+        defaultSlotCapacity: 8,
+        serviceWindows: [{ name: "lunch", start: "13:00", end: "15:00" }],
+      },
+    });
+  }
 }
