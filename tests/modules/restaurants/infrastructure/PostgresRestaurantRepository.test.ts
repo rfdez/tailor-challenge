@@ -1,3 +1,4 @@
+import { faker } from "@faker-js/faker";
 import { afterAll, beforeEach, describe, expect, it } from "vitest";
 
 import { PostgresRestaurantRepository } from "../../../../src/modules/restaurants/infrastructure/PostgresRestaurantRepository.js";
@@ -46,5 +47,22 @@ describe("PostgresRestaurantRepository should", () => {
         restaurant2.toPrimitives(),
       ]),
     );
+  });
+
+  it("return a restaurant by id", async () => {
+    const restaurant = RestaurantMother.create();
+
+    await repository.save(restaurant);
+
+    const result = await repository.search(restaurant.toPrimitives().id);
+
+    expect(result).not.toBeNull();
+    expect(result?.toPrimitives()).toEqual(restaurant.toPrimitives());
+  });
+
+  it("return null when the restaurant does not exist", async () => {
+    const result = await repository.search(faker.string.uuid());
+
+    expect(result).toBeNull();
   });
 });

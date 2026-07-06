@@ -37,6 +37,32 @@ export class PostgresRestaurantRepository implements RestaurantRepository {
     `;
   }
 
+  async search(id: string): Promise<Restaurant | null> {
+    const restaurant = await this.connection.searchOne<DatabaseRestaurant>`
+      SELECT id, name, description, address, image_url, latitude, longitude, rating, comments_count, created_at, updated_at
+      FROM restaurants
+      WHERE id = ${id};
+    `;
+
+    if (!restaurant) {
+      return null;
+    }
+
+    return Restaurant.fromPrimitives({
+      id: restaurant.id,
+      name: restaurant.name,
+      description: restaurant.description,
+      address: restaurant.address,
+      imageUrl: restaurant.image_url,
+      coordinates: {
+        lat: restaurant.latitude,
+        lng: restaurant.longitude,
+      },
+      rating: parseFloat(restaurant.rating),
+      commentsCounter: restaurant.comments_count,
+    });
+  }
+
   async searchAll(): Promise<Restaurant[]> {
     const restaurants = await this.connection.searchMany<DatabaseRestaurant>`
       SELECT id, name, description, address, image_url, latitude, longitude, rating, comments_count, created_at, updated_at
