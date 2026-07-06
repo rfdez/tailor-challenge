@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { AvailabilityCalculator } from "../../../../src/modules/reservations/domain/AvailabilityCalculator.js";
+import { ReservationMother } from "../../reservations/domain/ReservationMother.js";
 import { ReservationSettingsMother } from "../../restaurants/domain/ReservationSettingsMother.js";
 
 describe("AvailabilityCalculator should", { tags: "ci" }, () => {
@@ -162,17 +163,7 @@ describe("AvailabilityCalculator should", { tags: "ci" }, () => {
     const slots = calculator.calculate(
       settings.toPrimitives(),
       "2026-07-10",
-      [
-        {
-          id: "res-1",
-          restaurantId: "r1",
-          userId: "u1",
-          date: "2026-07-10",
-          time: "13:00",
-          partySize: 3,
-          status: "confirmed",
-        },
-      ],
+      [ReservationMother.confirmedAt("2026-07-10", "13:00", 3).toPrimitives()],
       4,
     );
 
@@ -193,24 +184,8 @@ describe("AvailabilityCalculator should", { tags: "ci" }, () => {
       settings.toPrimitives(),
       "2026-07-10",
       [
-        {
-          id: "res-1",
-          restaurantId: "r1",
-          userId: "u1",
-          date: "2026-07-10",
-          time: "13:00",
-          partySize: 3,
-          status: "confirmed",
-        },
-        {
-          id: "res-2",
-          restaurantId: "r1",
-          userId: "u2",
-          date: "2026-07-10",
-          time: "13:00",
-          partySize: 2,
-          status: "confirmed",
-        },
+        ReservationMother.confirmedAt("2026-07-10", "13:00", 3).toPrimitives(),
+        ReservationMother.confirmedAt("2026-07-10", "13:00", 2).toPrimitives(),
       ],
       4,
     );
@@ -231,24 +206,8 @@ describe("AvailabilityCalculator should", { tags: "ci" }, () => {
       settings.toPrimitives(),
       "2026-07-10",
       [
-        {
-          id: "res-1",
-          restaurantId: "r1",
-          userId: "u1",
-          date: "2026-07-10",
-          time: "13:00",
-          partySize: 3,
-          status: "confirmed",
-        },
-        {
-          id: "res-2",
-          restaurantId: "r1",
-          userId: "u2",
-          date: "2026-07-10",
-          time: "13:00",
-          partySize: 5,
-          status: "cancelled",
-        },
+        ReservationMother.confirmedAt("2026-07-10", "13:00", 3).toPrimitives(),
+        ReservationMother.cancelledAt("2026-07-10", "13:00", 5).toPrimitives(),
       ],
       4,
     );
@@ -267,17 +226,7 @@ describe("AvailabilityCalculator should", { tags: "ci" }, () => {
     const slots = calculator.calculate(
       settings.toPrimitives(),
       "2026-07-10",
-      [
-        {
-          id: "res-1",
-          restaurantId: "r1",
-          userId: "u1",
-          date: "2026-07-10",
-          time: "13:00",
-          partySize: 8,
-          status: "confirmed",
-        },
-      ],
+      [ReservationMother.confirmedAt("2026-07-10", "13:00", 8).toPrimitives()],
       4,
     );
 
@@ -297,17 +246,7 @@ describe("AvailabilityCalculator should", { tags: "ci" }, () => {
     const slots = calculator.calculate(
       settings.toPrimitives(),
       "2026-07-10",
-      [
-        {
-          id: "res-1",
-          restaurantId: "r1",
-          userId: "u1",
-          date: "2026-07-10",
-          time: "13:00",
-          partySize: 3,
-          status: "confirmed",
-        },
-      ],
+      [ReservationMother.confirmedAt("2026-07-10", "13:00", 3).toPrimitives()],
       6,
     );
 
@@ -326,17 +265,7 @@ describe("AvailabilityCalculator should", { tags: "ci" }, () => {
     const slots = calculator.calculate(
       settings.toPrimitives(),
       "2026-07-10",
-      [
-        {
-          id: "res-1",
-          restaurantId: "r1",
-          userId: "u1",
-          date: "2026-07-10",
-          time: "13:00",
-          partySize: 3,
-          status: "confirmed",
-        },
-      ],
+      [ReservationMother.confirmedAt("2026-07-10", "13:00", 3).toPrimitives()],
       5,
     );
 
@@ -355,17 +284,7 @@ describe("AvailabilityCalculator should", { tags: "ci" }, () => {
     const slots = calculator.calculate(
       settings.toPrimitives(),
       "2026-07-10",
-      [
-        {
-          id: "res-1",
-          restaurantId: "r1",
-          userId: "u1",
-          date: "2026-07-11",
-          time: "13:00",
-          partySize: 8,
-          status: "confirmed",
-        },
-      ],
+      [ReservationMother.confirmedAt("2026-07-11", "13:00", 8).toPrimitives()],
       4,
     );
 

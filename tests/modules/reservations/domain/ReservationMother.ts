@@ -45,4 +45,20 @@ export class ReservationMother {
   static multiple(count = 5): Reservation[] {
     return Array.from({ length: count }, () => this.create());
   }
+
+  static confirmedAt(
+    date: string,
+    time: string,
+    partySize: number,
+  ): Reservation {
+    return this.create({ date, time, partySize, status: "confirmed" });
+  }
+
+  static cancelledAt(
+    date: string,
+    time: string,
+    partySize: number,
+  ): Reservation {
+    return this.create({ date, time, partySize, status: "cancelled" });
+  }
 }
