@@ -1,18 +1,18 @@
 import { PostgresConnection } from "../../shared/infrastructure/PostgresConnection.js";
-import type { Reservation } from "../domain/Reservation.js";
+import { Reservation } from "../domain/Reservation.js";
 import { ReservationRepository } from "../domain/ReservationRepository.js";
 
-interface DatabaseReservation {
-  id: string;
-  restaurant_id: string;
-  user_id: string;
-  date: string;
-  time: string;
-  party_size: number;
-  status: "confirmed" | "cancelled";
-  created_at: string;
-  updated_at: string;
-}
+// interface DatabaseReservation {
+//   id: string;
+//   restaurant_id: string;
+//   user_id: string;
+//   date: string;
+//   time: string;
+//   party_size: number;
+//   status: "confirmed" | "cancelled";
+//   created_at: string;
+//   updated_at: string;
+// }
 
 export class PostgresReservationRepository implements ReservationRepository {
   constructor(private readonly connection: PostgresConnection) {}
