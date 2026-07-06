@@ -2,11 +2,12 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
 import app from "../../../../src/app/app.js";
 import { PostgresRestaurantRepository } from "../../../../src/modules/restaurants/infrastructure/PostgresRestaurantRepository.js";
-import { PostgresConnectionFactory } from "../../../../src/modules/shared/infrastructure/PostgresConnectionFactory.js";
+import { config } from "../../../../src/modules/shared/infrastructure/config.js";
+import { PostgresConnection } from "../../../../src/modules/shared/infrastructure/PostgresConnection.js";
 import { RestaurantMother } from "../../../modules/restaurants/domain/RestaurantMother.js";
 
 describe("GET /restaurants should", () => {
-  const connection = PostgresConnectionFactory.create();
+  const connection = new PostgresConnection(config.postgres.url);
   const repository = new PostgresRestaurantRepository(connection);
 
   beforeAll(async () => {

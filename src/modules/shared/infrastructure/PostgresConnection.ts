@@ -4,19 +4,8 @@ import postgres, { type Row } from "postgres";
 export class PostgresConnection {
   public readonly sql: postgres.Sql;
 
-  constructor(
-    host: string,
-    port: number,
-    user: string,
-    password: string,
-    database: string,
-  ) {
-    this.sql = postgres({
-      host,
-      port,
-      user,
-      password,
-      database,
+  constructor(url: string) {
+    this.sql = postgres(url, {
       onnotice: () => {
         // Ignore notice messages from PostgreSQL
       },

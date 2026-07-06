@@ -1,11 +1,12 @@
 import { afterAll, beforeEach, describe, expect, it } from "vitest";
 
 import { PostgresRestaurantRepository } from "../../../../src/modules/restaurants/infrastructure/PostgresRestaurantRepository.js";
-import { PostgresConnectionFactory } from "../../../../src/modules/shared/infrastructure/PostgresConnectionFactory.js";
+import { config } from "../../../../src/modules/shared/infrastructure/config.js";
+import { PostgresConnection } from "../../../../src/modules/shared/infrastructure/PostgresConnection.js";
 import { RestaurantMother } from "../domain/RestaurantMother.js";
 
 describe("PostgresRestaurantRepository should", () => {
-  const connection = PostgresConnectionFactory.create();
+  const connection = new PostgresConnection(config.postgres.url);
   const repository = new PostgresRestaurantRepository(connection);
 
   beforeEach(async () => {
