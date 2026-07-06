@@ -30,7 +30,15 @@ export class ReservationCreator {
     time: string,
     partySize: number,
   ): Promise<void> {
-    const reservation = Reservation.create(id, restaurantId, userId, date, time, partySize, this.clock);
+    const reservation = Reservation.create(
+      id,
+      restaurantId,
+      userId,
+      date,
+      time,
+      partySize,
+      this.clock,
+    );
     // ...validations...
     await this.repository.save(reservation);
   }
