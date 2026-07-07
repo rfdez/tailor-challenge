@@ -1,0 +1,495 @@
+{
+  "seedUserId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+  "restaurants": [
+    {
+      "id": "807c419d-7738-4018-ac05-0df5a333da07",
+      "name": "Mission Chinese Food",
+      "description": "A bold, energetic restaurant known for creative Chinese-American dishes, family-style menus, and a lively dining room.",
+      "address": "171 E Broadway, New York, NY 10002",
+      "imageUrl": "https://video-images.vice.com/articles/590647db9ac0f921f03ed8d9/lede/1493583856927-mcf_halloween_017.jpeg?crop=1xw:0.8439609902475619xh;center,center&resize=1200:*",
+      "coordinates": { "lat": 40.713829, "lng": -73.989667 },
+      "rating": 3.67,
+      "commentsCounter": 3,
+      "capacity": 72,
+      "cuisineType": "Asian",
+      "reservationSettings": {
+        "slotIntervalMinutes": 30,
+        "defaultSlotCapacity": 8,
+        "serviceWindows": [
+          { "name": "lunch", "start": "13:00", "end": "15:00" },
+          { "name": "dinner", "start": "20:00", "end": "23:00" }
+        ]
+      }
+    },
+    {
+      "id": "65d65a3a-d6ea-460a-9072-02dcb2751809",
+      "name": "Emily",
+      "description": "A cosy Brooklyn pizza restaurant serving wood-fired pies, salads, starters, and a well-known burger.",
+      "address": "919 Fulton St, Brooklyn, NY 11238",
+      "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/17/07/cd/40/the-colony-and-vodka.jpg",
+      "coordinates": { "lat": 40.683555, "lng": -73.966393 },
+      "rating": 4.33,
+      "commentsCounter": 3,
+      "capacity": 48,
+      "cuisineType": "Pizza",
+      "reservationSettings": {
+        "slotIntervalMinutes": 30,
+        "defaultSlotCapacity": 6,
+        "serviceWindows": [
+          { "name": "lunch", "start": "13:00", "end": "15:00" },
+          { "name": "dinner", "start": "20:00", "end": "23:00" }
+        ]
+      }
+    },
+    {
+      "id": "f0655f03-9554-4536-bea9-f6e9ef3ff1ae",
+      "name": "Kang Ho Dong Baekjeong",
+      "description": "A Korean BBQ restaurant with tabletop grills, generous sides, and a menu built for groups and birthdays.",
+      "address": "1 E 32nd St, New York, NY 10016",
+      "imageUrl": "https://media-cdn.tripadvisor.com/media/photo-s/06/da/d6/de/kang-hodong-baekjeong.jpg",
+      "coordinates": { "lat": 40.747143, "lng": -73.985414 },
+      "rating": 3.67,
+      "commentsCounter": 3,
+      "capacity": 90,
+      "cuisineType": "Asian",
+      "reservationSettings": {
+        "slotIntervalMinutes": 30,
+        "defaultSlotCapacity": 10,
+        "serviceWindows": [
+          { "name": "lunch", "start": "13:00", "end": "15:00" },
+          { "name": "dinner", "start": "20:00", "end": "23:00" }
+        ]
+      }
+    },
+    {
+      "id": "ba27bebb-6905-4449-893d-74bb0f43370d",
+      "name": "Katz's Delicatessen",
+      "description": "A classic New York delicatessen famous for pastrami, rye bread, large sandwiches, and counter service.",
+      "address": "205 E Houston St, New York, NY 10002",
+      "imageUrl": "https://www.livingfla.com/wp-content/uploads/2019/04/katz-1-500.jpg",
+      "coordinates": { "lat": 40.722216, "lng": -73.987501 },
+      "rating": 4.0,
+      "commentsCounter": 3,
+      "capacity": 120,
+      "cuisineType": "American",
+      "reservationSettings": {
+        "slotIntervalMinutes": 30,
+        "defaultSlotCapacity": 12,
+        "serviceWindows": [
+          { "name": "lunch", "start": "13:00", "end": "15:00" },
+          { "name": "dinner", "start": "20:00", "end": "23:00" }
+        ]
+      }
+    },
+    {
+      "id": "c9ffdd0e-86d9-458a-a9dd-63ff4b17597a",
+      "name": "Roberta's Pizza",
+      "description": "A Brooklyn food-scene staple serving pizzas, seasonal vegetable dishes, salads, and charcuterie.",
+      "address": "261 Moore St, Brooklyn, NY 11206",
+      "imageUrl": "https://c8.alamy.com/compes/dp9a5f/robertas-pizza-restaurant-en-east-williamsburg-de-brooklyn-dp9a5f.jpg",
+      "coordinates": { "lat": 40.705089, "lng": -73.933585 },
+      "rating": 4.0,
+      "commentsCounter": 3,
+      "capacity": 84,
+      "cuisineType": "Pizza",
+      "reservationSettings": {
+        "slotIntervalMinutes": 30,
+        "defaultSlotCapacity": 8,
+        "serviceWindows": [
+          { "name": "lunch", "start": "13:00", "end": "15:00" },
+          { "name": "dinner", "start": "20:00", "end": "23:00" }
+        ]
+      }
+    },
+    {
+      "id": "368e59c0-2e94-41e7-956c-8019a300884a",
+      "name": "Hometown BBQ",
+      "description": "A spacious Texas-style barbecue restaurant known for smoked brisket, ribs, pork tacos, and lamb dishes.",
+      "address": "454 Van Brunt St, Brooklyn, NY 11231",
+      "imageUrl": "https://es.nycgo.com/images/venues/6326/hometownbbq_redhook_brooklyn_nyc_kengoodman_hometownbbq-153-3__x_large.jpg",
+      "coordinates": { "lat": 40.674925, "lng": -74.016162 },
+      "rating": 4.0,
+      "commentsCounter": 3,
+      "capacity": 110,
+      "cuisineType": "American",
+      "reservationSettings": {
+        "slotIntervalMinutes": 30,
+        "defaultSlotCapacity": 10,
+        "serviceWindows": [
+          { "name": "lunch", "start": "13:00", "end": "15:00" },
+          { "name": "dinner", "start": "20:00", "end": "23:00" }
+        ]
+      }
+    },
+    {
+      "id": "5cab1554-3382-4c6b-9690-d57f7077cd04",
+      "name": "Superiority Burger",
+      "description": "A tiny vegetarian spot turning seasonal vegetables into satisfying riffs on American comfort food.",
+      "address": "430 E 9th St, New York, NY 10009",
+      "imageUrl": "http://www.wazwu.com/blog/wp-content/uploads/2015/10/img_6912.jpg",
+      "coordinates": { "lat": 40.727397, "lng": -73.983645 },
+      "rating": 4.33,
+      "commentsCounter": 3,
+      "capacity": 24,
+      "cuisineType": "American",
+      "reservationSettings": {
+        "slotIntervalMinutes": 30,
+        "defaultSlotCapacity": 4,
+        "serviceWindows": [
+          { "name": "lunch", "start": "13:00", "end": "15:00" },
+          { "name": "dinner", "start": "20:00", "end": "23:00" }
+        ]
+      }
+    },
+    {
+      "id": "03a8f44a-8f27-402a-97e3-83161e0937b5",
+      "name": "The Dutch",
+      "description": "A quintessential American restaurant with steaks, burgers, oysters, seafood, and pasta in Soho.",
+      "address": "131 Sullivan St, New York, NY 10012",
+      "imageUrl": "https://es.nycgo.com/images/venues/4829/thedutch29_sa_bar-room_sm__x_large.jpg",
+      "coordinates": { "lat": 40.726584, "lng": -74.002082 },
+      "rating": 4.0,
+      "commentsCounter": 3,
+      "capacity": 68,
+      "cuisineType": "American",
+      "reservationSettings": {
+        "slotIntervalMinutes": 30,
+        "defaultSlotCapacity": 8,
+        "serviceWindows": [
+          { "name": "lunch", "start": "13:00", "end": "15:00" },
+          { "name": "dinner", "start": "20:00", "end": "23:00" }
+        ]
+      }
+    },
+    {
+      "id": "81c2d582-0ec4-4022-8080-a39f718e9344",
+      "name": "Mu Ramen",
+      "description": "A ramen shop known for rich tonkotsu broth, high-minded small plates, and Japanese beef specials.",
+      "address": "1209 Jackson Ave, Queens, NY 11101",
+      "imageUrl": "https://resizer.otstatic.com/v2/photos/huge/25670650.jpg",
+      "coordinates": { "lat": 40.743797, "lng": -73.950652 },
+      "rating": 4.0,
+      "commentsCounter": 3,
+      "capacity": 38,
+      "cuisineType": "Asian",
+      "reservationSettings": {
+        "slotIntervalMinutes": 30,
+        "defaultSlotCapacity": 6,
+        "serviceWindows": [
+          { "name": "lunch", "start": "13:00", "end": "15:00" },
+          { "name": "dinner", "start": "20:00", "end": "23:00" }
+        ]
+      }
+    },
+    {
+      "id": "cbf82073-19df-4ef4-8b29-ee9570b7876f",
+      "name": "Casa Enrique",
+      "description": "A laid-back Mexican restaurant in Long Island City known for tacos, mole, crab tostadas, and desserts.",
+      "address": "5-48 49th Ave, Queens, NY 11101",
+      "imageUrl": "https://i.pinimg.com/474x/47/b1/d3/47b1d3175589f19f58a35cfcd78b3e73--city-restaurants-mexican-restaurants.jpg",
+      "coordinates": { "lat": 40.743394, "lng": -73.954235 },
+      "rating": 4.67,
+      "commentsCounter": 3,
+      "capacity": 56,
+      "cuisineType": "Mexican",
+      "reservationSettings": {
+        "slotIntervalMinutes": 30,
+        "defaultSlotCapacity": 6,
+        "serviceWindows": [
+          { "name": "lunch", "start": "13:00", "end": "15:00" },
+          { "name": "dinner", "start": "20:00", "end": "23:00" }
+        ]
+      }
+    }
+  ],
+  "reservations": [
+    {
+      "id": "aab58885-aa9e-4f1a-9633-851eca3e5265",
+      "restaurantId": "807c419d-7738-4018-ac05-0df5a333da07",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "13:00",
+      "partySize": 8,
+      "status": "confirmed"
+    },
+    {
+      "id": "a0ad5daf-9898-4e96-b518-54b2dd041195",
+      "restaurantId": "807c419d-7738-4018-ac05-0df5a333da07",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "13:30",
+      "partySize": 3,
+      "status": "confirmed"
+    },
+    {
+      "id": "f59174b6-c9b4-4fbe-bcdb-fed2a4efdb8e",
+      "restaurantId": "807c419d-7738-4018-ac05-0df5a333da07",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "20:00",
+      "partySize": 6,
+      "status": "confirmed"
+    },
+    {
+      "id": "b574b263-db07-4540-97e9-71e8e302c1b4",
+      "restaurantId": "807c419d-7738-4018-ac05-0df5a333da07",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-11",
+      "time": "21:30",
+      "partySize": 8,
+      "status": "confirmed"
+    },
+    {
+      "id": "22ac59e5-abb4-49b5-bf9a-5abf6b9c6d52",
+      "restaurantId": "65d65a3a-d6ea-460a-9072-02dcb2751809",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "14:00",
+      "partySize": 6,
+      "status": "confirmed"
+    },
+    {
+      "id": "cb8867e5-6945-41f5-9929-82f0f2046d2f",
+      "restaurantId": "65d65a3a-d6ea-460a-9072-02dcb2751809",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "20:30",
+      "partySize": 2,
+      "status": "confirmed"
+    },
+    {
+      "id": "8da57f05-0d12-4729-8ffb-4b671e86891e",
+      "restaurantId": "65d65a3a-d6ea-460a-9072-02dcb2751809",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-12",
+      "time": "22:00",
+      "partySize": 5,
+      "status": "confirmed"
+    },
+    {
+      "id": "c5181098-d382-4588-9f9a-024cf514c4f0",
+      "restaurantId": "f0655f03-9554-4536-bea9-f6e9ef3ff1ae",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "13:00",
+      "partySize": 4,
+      "status": "confirmed"
+    },
+    {
+      "id": "cdd821dd-88eb-4b45-9fc0-286ae233fb57",
+      "restaurantId": "f0655f03-9554-4536-bea9-f6e9ef3ff1ae",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "20:00",
+      "partySize": 10,
+      "status": "confirmed"
+    },
+    {
+      "id": "7a288ac8-2c7c-4226-b565-8245eceb8d41",
+      "restaurantId": "f0655f03-9554-4536-bea9-f6e9ef3ff1ae",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "20:30",
+      "partySize": 7,
+      "status": "confirmed"
+    },
+    {
+      "id": "8dd9689d-519f-4c19-986d-42a5c7b54dbf",
+      "restaurantId": "f0655f03-9554-4536-bea9-f6e9ef3ff1ae",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-13",
+      "time": "21:00",
+      "partySize": 10,
+      "status": "confirmed"
+    },
+    {
+      "id": "5a61ce8e-853b-4787-b529-2cdff62380be",
+      "restaurantId": "ba27bebb-6905-4449-893d-74bb0f43370d",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "13:30",
+      "partySize": 12,
+      "status": "confirmed"
+    },
+    {
+      "id": "cc74ccb2-00f3-4e76-bc02-ea1f1754f60f",
+      "restaurantId": "ba27bebb-6905-4449-893d-74bb0f43370d",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "14:00",
+      "partySize": 9,
+      "status": "confirmed"
+    },
+    {
+      "id": "6e7e8f70-01e9-431e-97ba-1f09412455ee",
+      "restaurantId": "ba27bebb-6905-4449-893d-74bb0f43370d",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-11",
+      "time": "20:30",
+      "partySize": 12,
+      "status": "confirmed"
+    },
+    {
+      "id": "7c527372-12af-4352-8deb-23e6926a2a7d",
+      "restaurantId": "c9ffdd0e-86d9-458a-a9dd-63ff4b17597a",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "14:30",
+      "partySize": 8,
+      "status": "confirmed"
+    },
+    {
+      "id": "a389336d-280a-4a07-9ced-bc1845f9f77b",
+      "restaurantId": "c9ffdd0e-86d9-458a-a9dd-63ff4b17597a",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "20:00",
+      "partySize": 5,
+      "status": "confirmed"
+    },
+    {
+      "id": "7fcfba50-06fb-4af5-bf32-2508e42e857a",
+      "restaurantId": "c9ffdd0e-86d9-458a-a9dd-63ff4b17597a",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-12",
+      "time": "21:30",
+      "partySize": 8,
+      "status": "confirmed"
+    },
+    {
+      "id": "133b4efa-e739-47e0-803a-4629b69eacbb",
+      "restaurantId": "368e59c0-2e94-41e7-956c-8019a300884a",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "13:00",
+      "partySize": 10,
+      "status": "confirmed"
+    },
+    {
+      "id": "5f87c65b-fdb0-4bb6-8fbb-acac0880a9c9",
+      "restaurantId": "368e59c0-2e94-41e7-956c-8019a300884a",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "13:30",
+      "partySize": 8,
+      "status": "confirmed"
+    },
+    {
+      "id": "0755578f-c811-42ca-b9d1-d9f0bb45beb0",
+      "restaurantId": "368e59c0-2e94-41e7-956c-8019a300884a",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-11",
+      "time": "20:00",
+      "partySize": 4,
+      "status": "confirmed"
+    },
+    {
+      "id": "8f97aff1-3a60-4df8-b65b-2dff1dd21244",
+      "restaurantId": "5cab1554-3382-4c6b-9690-d57f7077cd04",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "13:00",
+      "partySize": 4,
+      "status": "confirmed"
+    },
+    {
+      "id": "55fbec93-613b-4771-8aa6-73a285624433",
+      "restaurantId": "5cab1554-3382-4c6b-9690-d57f7077cd04",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "20:30",
+      "partySize": 3,
+      "status": "confirmed"
+    },
+    {
+      "id": "b365629c-fc73-47a6-9735-a6f2ab090fcc",
+      "restaurantId": "5cab1554-3382-4c6b-9690-d57f7077cd04",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-12",
+      "time": "21:00",
+      "partySize": 4,
+      "status": "confirmed"
+    },
+    {
+      "id": "0e0b2739-8704-4953-a6ca-fe4bc4ba2334",
+      "restaurantId": "03a8f44a-8f27-402a-97e3-83161e0937b5",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "20:00",
+      "partySize": 8,
+      "status": "confirmed"
+    },
+    {
+      "id": "6006d74a-a359-4569-9a37-b5d97b700d6f",
+      "restaurantId": "03a8f44a-8f27-402a-97e3-83161e0937b5",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "20:30",
+      "partySize": 8,
+      "status": "confirmed"
+    },
+    {
+      "id": "89387bea-280b-4bd2-87eb-da6c003ea1a2",
+      "restaurantId": "03a8f44a-8f27-402a-97e3-83161e0937b5",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "21:00",
+      "partySize": 5,
+      "status": "confirmed"
+    },
+    {
+      "id": "5504585b-58e7-48ff-995c-be22f5d433a8",
+      "restaurantId": "81c2d582-0ec4-4022-8080-a39f718e9344",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "13:30",
+      "partySize": 2,
+      "status": "confirmed"
+    },
+    {
+      "id": "3e8984ea-6e60-4791-b827-7c18c8189b9a",
+      "restaurantId": "81c2d582-0ec4-4022-8080-a39f718e9344",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "21:30",
+      "partySize": 6,
+      "status": "confirmed"
+    },
+    {
+      "id": "a8e2be98-c3b6-4d3f-8a3b-94f1013c03be",
+      "restaurantId": "81c2d582-0ec4-4022-8080-a39f718e9344",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-11",
+      "time": "22:00",
+      "partySize": 6,
+      "status": "confirmed"
+    },
+    {
+      "id": "ad443d22-804d-450b-a4c5-0fdc43290b9d",
+      "restaurantId": "cbf82073-19df-4ef4-8b29-ee9570b7876f",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "14:00",
+      "partySize": 6,
+      "status": "confirmed"
+    },
+    {
+      "id": "808b2231-499e-462a-8644-67ccd655d875",
+      "restaurantId": "cbf82073-19df-4ef4-8b29-ee9570b7876f",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-10",
+      "time": "20:00",
+      "partySize": 4,
+      "status": "confirmed"
+    },
+    {
+      "id": "ab00f50d-5615-47d8-8d31-2294bed55b6b",
+      "restaurantId": "cbf82073-19df-4ef4-8b29-ee9570b7876f",
+      "userId": "985b2c05-1332-4b08-ab06-ab39e9296ee0",
+      "date": "2026-07-13",
+      "time": "22:30",
+      "partySize": 6,
+      "status": "confirmed"
+    }
+  ]
+}

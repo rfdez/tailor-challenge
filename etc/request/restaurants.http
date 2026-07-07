@@ -1,0 +1,5 @@
+### Get all restaurants
+GET http://localhost:8080/restaurants HTTP/1.1
+
+### Get the availability of a restaurant for a specific date and party size
+GET http://localhost:8080/restaurants/807c419d-7738-4018-ac05-0df5a333da07/availability?date=2026-07-10&partySize=3 HTTP/1.1
