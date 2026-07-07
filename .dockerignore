@@ -5,6 +5,7 @@ coverage
 databases
 dist
 docs
+etc
 node_modules
 tests
 .dockerignore
