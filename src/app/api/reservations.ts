@@ -1,5 +1,5 @@
-import { sValidator } from "@hono/standard-validator";
 import { Hono } from "hono";
+import { describeRoute, validator } from "hono-openapi";
 import * as z from "zod";
 
 import { ReservationCreator } from "../../modules/reservations/application/create/ReservationCreator.js";
@@ -18,6 +18,10 @@ import { config } from "../../modules/shared/infrastructure/config.js";
 
 const app = new Hono();
 
+const createReservationHeaderSchema = z.object({
+  "x-anonymous-user-id": z.string().uuid(),
+});
+
 const createReservationParamSchema = z.object({
   id: z.uuid(),
 });
@@ -25,8 +29,8 @@ const createReservationParamSchema = z.object({
 const createReservationBodySchema = z.object({
   restaurantId: z.uuid(),
   date: z.iso.date(),
-  time: z.string().regex(/^\d{2}:\d{2}$/),
-  partySize: z.number().int().positive(),
+  time: z.iso.time({ precision: -1 }),
+  partySize: z.coerce.number().int().positive(),
 });
 
 const clock = new SystemClock();
@@ -44,16 +48,33 @@ const creator = new ReservationCreator(
 
 app.put(
   "/:id",
-  sValidator("param", createReservationParamSchema),
-  sValidator("json", createReservationBodySchema),
-  async (c) => {
-    const userId = c.req.header("x-anonymous-user-id");
-    if (!userId) {
+  describeRoute({
+    tags: ["Reservations"],
+    summary: "Create a new reservation",
+    description: "Create a new reservation with the specified details",
+    responses: {
+      201: {
+        description: "Reservation created successfully",
+      },
+      400: {
+        description: "Invalid query parameters",
+      },
+      404: {
+        description: "Restaurant not found",
+      },
+    },
+  }),
+  validator("header", createReservationHeaderSchema, (result, c) => {
+    if (!result.success) {
       return c.json(null, 401, {
         "WWW-Authenticate": 'Bearer realm="Access to the reservations API"',
       });
     }
-
+  }),
+  validator("param", createReservationParamSchema),
+  validator("json", createReservationBodySchema),
+  async (c) => {
+    const { "x-anonymous-user-id": userId } = c.req.valid("header");
     const { id } = c.req.valid("param");
     const { restaurantId, date, time, partySize } = c.req.valid("json");
 
