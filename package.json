@@ -31,7 +31,7 @@
     "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@hono/node-server": "2.0.8",
+    "@hono/node-server": "2.0.10",
     "@hono/standard-validator": "0.2.3",
     "@hono/swagger-ui": "0.6.1",
     "hono": "4.12.27",
